@@ -1,0 +1,60 @@
+# Diagrama de Entidade-Relacionamento
+
+## Entidades e atributos:
+- **PROPRIETARIO**
+  - cpf (chave)
+  - nome
+  - data_de_nascimento
+  - telefone
+  - sexo
+  - endereco (composto) - rua, numero, cep, bairro, cidade, uf 
+- **VEICULO**
+  - placa (chave)
+  - chassi
+  - cor
+  - ano_fabricacao
+- **MODELO**
+  - numero_modelo (chave)
+  - nome_modelo
+- **CATEGORIA**
+  - numero_categoria (chave)
+  - nome_categoria
+- **INFRACAO**
+  - id_infracao (chave)
+  - veiculo_infrator
+  - data_hora
+  - descricao_infracao
+  - velocidade_aferida
+- **TIPO_INFRACAO**
+  - numero_infracao (chave)
+  - valor
+- **LOCAL**
+  - (latitude, longitude) (chave composta)
+  - velocidade_permitida
+- **AGENTE**
+  - matricula (chave)
+  - nome
+  - data_contratacao
+
+## Cardinalidades
+- **PROPRIETARIO possui VEICULO**
+  - um proprietario pode ter 0 veiculos até n (0:n)
+  - um veiculo tem um e somente um proprietario (1:1)
+- **VEICULO tem MODELO**1
+  - um veículo tem apenas um modelo (1:1)
+  - um modelo pode pertencer de 0 a vários veículos (0:n)
+- **VEICULO tem CATEGORIA**
+  - um veículo tem apenas uma categoria (1:1)
+  - cada categoria pode pertencer de 0 a vários veículos (0:n)
+- **VEICULO comete INFRACAO**
+  - um veículo pode cometer 0 ou várias infrações (0:n)
+  - uma infração está associada à apenas um veículo (1:1)
+- **AGENTE registra INFRACAO**
+  - um agente pode registrar 0 ou várias infrações (0:n)
+  - uma infração pode ser registrada apenas por um agente (1:1)
+- **TIPO_INFRACAO é do tipo INFRACAO**
+  - um tipo de infração pode ter sido cometido 0 ou várias vezes (0:n)
+  - uma infração deve ter apenas um tipo de infração (1:1)
+- **LOCAL ocorre em INFRACAO**
+  - em um local podem ter ocorrido 0 ou várias infrações (0:n)
+  - uma infração deve ter ocorrido em apenas um lugar (1:1)
