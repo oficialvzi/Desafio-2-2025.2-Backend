@@ -40,7 +40,7 @@
 - **PROPRIETARIO possui VEICULO**
   - um proprietario pode ter 0 veiculos até n (0:n)
   - um veiculo tem um e somente um proprietario (1:1)
-- **VEICULO tem MODELO**1
+- **VEICULO tem MODELO** 
   - um veículo tem apenas um modelo (1:1)
   - um modelo pode pertencer de 0 a vários veículos (0:n)
 - **VEICULO tem CATEGORIA**
