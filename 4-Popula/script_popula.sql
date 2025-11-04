@@ -1,3 +1,10 @@
+/* SCRIPT POPULA - Banco de dados Detran
+
+Autor: Arthur Choi Braga
+Data: 04/11/2025
+
+Descrição: Script para popular as tabelas do banco de dados do Detran.
+*/
 INSERT INTO PROPRIETARIO (cpf, nome, dataNascimento, telefone, sexo, rua, numero, cep, bairro, cidade, estado) VALUES
 ('11122233344', 'Joao Silva', '1980-05-10', '11987654321', 'M', 'Rua A', '10', '12345678', 'Centro', 'Sao Paulo', 'SP'),
 ('22233344455', 'Maria Oliveira', '1992-11-20', '21987654322', 'F', 'Av B', '200', '23456789', 'Tijuca', 'Rio de Janeiro', 'RJ'),
